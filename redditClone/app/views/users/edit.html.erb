@@ -1,0 +1,19 @@
+<h1>Edit <%= @user.username %>'s Account</h1>
+
+<form action="<%= user_url(@user) %>" method="post"> 
+  <input type="hidden" name="_method" value="PATCH">
+  <%= form_auth %>
+
+  <p> Current username: <%= @user.username %> </p>
+  <label>New username:
+    <input type="text" name="user[username]" value=""> 
+  </label>
+  <br>
+
+  <label>New password:
+    <input type="password" name="user[password]" value=""> 
+  </label>
+  <br>
+   
+  <button>Update Account</button>
+</form>

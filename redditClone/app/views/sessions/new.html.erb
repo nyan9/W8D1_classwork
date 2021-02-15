@@ -1,0 +1,21 @@
+<h1>Log In</h1>
+
+<form action="<%= session_url %>" method="post"> 
+  <%= form_auth %>
+
+  <label>Username
+    <input type="text" name="user[username]">
+  </label>
+  <label>Password
+    <input type="password" name="user[password]">
+  </label>
+
+  <button>Log In</button>
+</form>
+<br>
+
+<form action="<%= new_user_url %>" method="get">
+  <%= form_auth %>
+
+  <button>Create New Account</button>
+</form>
